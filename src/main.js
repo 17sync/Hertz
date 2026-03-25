@@ -10,7 +10,9 @@ function createWindow(){
     frame: false, 
     transparent: false,
     webPreferences: {
-      contextIsolation: true
+       nodeIntegration: true,
+       enableRemoteModule: true,
+       contextIsolation: true
     }
   });
 
