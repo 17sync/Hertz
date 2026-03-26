@@ -8,11 +8,11 @@ function createWindow(){
     maximizable: false,
     fullscreenable: false,
     frame: false, 
-    transparent: false,
+    transparent: true,
     webPreferences: {
        nodeIntegration: true,
        enableRemoteModule: true,
-       contextIsolation: true
+       contextIsolation: false
     }
   });
 
