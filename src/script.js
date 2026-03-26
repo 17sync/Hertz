@@ -42,28 +42,31 @@ function loadSong(index){
 
 let isPlaying=false;
 
-playButton.addEventListener("click", ()=>{
+playButton.onclick=()=>{
   if(!isPlaying){
     audio.play();
-    playButton.innerText="Pause";
-  }
-  else{
+    playButton.innerText="⏸";
+  }else{
     audio.pause();
-    playButton.innerText="Play";
+    playButton.innerText="▶";
   }
   isPlaying=!isPlaying;
-});
+};
 
-nextButton.addEventListener("click", ()=>{
+nextButton.onclick=()=>{
   currentIndex=(currentIndex+1)%songs.length;
   loadSong(currentIndex);
   audio.play();
-});
+  playBtn.innerText="⏸";
+  isPlaying=true;
+};
 
-prevButton.addEventListener("click", ()=>{
+prevButton.onclick=()=>{
   currentIndex=(currentIndex-1+songs.length)%songs.length;
   loadSong(currentIndex);
   audio.play();
-});
+  playBtn.innerText="⏸";
+  isPlaying=true;
+};
 
 loadSong(currentIndex);
