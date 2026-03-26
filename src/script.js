@@ -40,6 +40,8 @@ const prevButton=document.getElementById("prev");
 const titleContainer=document.querySelector(".title-container");
 const title=document.getElementById("title");
 const cover=document.getElementById("cover");
+const progress=document.getElementById("progress");
+const volume=document.getElementById("volume");
 
 function getAlbum(song){
   return song.split("/")[2]; 
@@ -65,6 +67,7 @@ function loadSong(index){
   cover.src=getCover(song);
   audio.src=song;
   title.innerText=getTitle(song);
+  progress.value=0;
 
   handleTitleOverflow();
 }
@@ -97,6 +100,20 @@ prevButton.onclick=()=>{
   playButton.innerText="⏸";
   isPlaying=true;
 };
+
+audio.addEventListener("timeupdate", ()=>{
+  const percent=(audio.currentTime/audio.duration)*100;
+  progress.value=percent||0;
+});
+
+progress.addEventListener("input", ()=>{
+  const time=(progress.value/100)*audio.duration;
+  audio.currentTime=time;
+});
+
+volume.addEventListener("input", ()=>{
+  audio.volume=volume.value;
+});
 
 function handleTitleOverflow(){
   title.classList.remove("scroll");
