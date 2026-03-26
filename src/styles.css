@@ -33,7 +33,7 @@ body{
   width:180px;
   height:180px;
   object-fit:cover;
-  margin-bottom:15px;
+  margin-bottom:5px;
 
   box-shadow:0 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -94,6 +94,38 @@ button{
   transition:0.2s;
 
   -webkit-app-region:no-drag;
+}
+
+#progress{
+  width:80%;
+  margin:15px 0;
+  cursor:pointer;
+
+  -webkit-app-region:no-drag;
+}
+
+#volume{
+  width:60%;
+  margin-top:15px;
+  cursor:pointer;
+
+  -webkit-app-region:no-drag;
+}
+
+input[type="range"]{
+  appearance:none;
+  height:5px;
+  background:rgba(255,255,255,0.2);
+  border-radius:5px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  appearance:none;
+  width:12px;
+  height:12px;
+  background:white;
+  border-radius:50%;
+  cursor:pointer;
 }
 
 button:hover{
