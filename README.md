@@ -48,6 +48,7 @@ Hertz is built using **HTML**, **CSS** and **Javascript** wrapped in a desktop e
 ### Code Overview
 
 **- index.html**
+
 Defines the structure of the user interface, including the album art, song title, progress bar, and playback controls.
 ```html
 <!DOCTYPE html>
@@ -87,6 +88,7 @@ Defines the structure of the user interface, including the album art, song title
 <br>
 
 **- styles.css**
+
 Defines the visual appearance of the application, including layout, spacing, glassmorphism effects, animations, and responsive positioning of UI elements.
 ```css
 body{
@@ -227,6 +229,7 @@ button:hover{
 <br>
 
 **- main.js**
+
 Handles the Electron main process, including creating the application window and managing IPC communication for window controls.
 ```js
 const{app, BrowserWindow}=require("electron");
@@ -260,6 +263,7 @@ app.on("window-all-closed", ()=>{
 <br>
 
 **- script.js**
+
 Handles the core functionality of the music player, including loading songs, controlling playback, updating the progress bar, managing volume, handling UI interactions, and dynamically updating song metadata and album art.
 ```js
 const songs=[
