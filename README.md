@@ -1,9 +1,22 @@
-<h1>
-  <img src="images/icon.png" width="60" style="vertical-align:middle;" />
+<h1 align="center">
+  <img src="images/icon.png" width="50" style="vertical-align:middle; margin-right:10px;" />
   Hertz
 </h1>
 
-A simple minimalistic music player built using the Electron framework.
+<p align="center">
+  A simple minimalistic music player built using the Electron framework.
+</p>
+
+---
+
+## Contents
+
+- [**Tech Stack**](#-tech-stack)
+- [**Features**](#-features)
+- [**Code Overview**](#-code-overview)
+- [**Preview**](#preview)
+- [**Project Structure**](#-project-structure)
+- [**How to Run**](#how-to-run)
 
 ---
 
